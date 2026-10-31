@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jack Menu Guide</title>
+<meta name="description" content="An unofficial Jack in the Box menu guide with current prices for burgers, tacos, chicken, breakfast, sides, desserts and deals.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+</head>
+<body data-page="home">
+<header id="site-header"></header>
+<main class="wrap">
+
+<section class="hero">
+  <div>
+    <h1>The whole Jack in the Box menu, <span>with prices.</span></h1>
+    <p class="lead">Burgers, tacos, chicken, all-day breakfast and late-night Munchie Meals. Every item with a researched price, so you know what to expect before you order.</p>
+    <form class="search" id="home-search" role="search">
+      <input type="search" placeholder="Search the menu, e.g. tacos" aria-label="Search the menu">
+      <button class="btn" type="submit">Search</button>
+    </form>
+    <div class="stats" id="hero-stats"></div>
+  </div>
+  <div class="hero-art" aria-hidden="true"><span>🍔</span><i class="orbit o1">🌮</i><i class="orbit o2">🍟</i><i class="orbit o3">🥤</i><i class="orbit o4">🥐</i></div>
+</section>
+<section class="block">
+  <div class="section-head"><h2>Browse the menu</h2><a href="menu.html">See everything →</a></div>
+  <div class="tiles" id="category-tiles"></div>
+</section>
+<section class="block">
+  <div class="section-head"><h2>Fan favorites</h2><a href="menu.html">Full menu →</a></div>
+  <div class="grid" id="popular-items"></div>
+</section>
+<section class="block">
+  <div class="section-head"><h2>Deals &amp; limited-time items</h2><a href="deals.html">All deals →</a></div>
+  <div class="deals" id="deals-preview"></div>
+</section>
+<div class="notice"><strong>Heads up:</strong> prices are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div>
+
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/menu-data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
