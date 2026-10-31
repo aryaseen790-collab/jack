@@ -188,3 +188,13 @@ th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--li
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Tight phone header */
+@media (max-width: 420px) {
+  .bar { gap: 8px; }
+  .brand { font-size: 1rem; gap: 8px; }
+  .brand-mark { width: 32px; height: 32px; }
+  .bar-actions { gap: 6px; }
+  .icon-btn, .order-link { padding: 0 10px; height: 38px; min-width: 38px; }
+}
+@media (max-width: 359px) { .brand em { display: none; } }

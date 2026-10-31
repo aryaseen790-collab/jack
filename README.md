@@ -4,6 +4,8 @@ An unofficial, fan-made website for the Jack in the Box menu, with researched pr
 
 > Not affiliated with or endorsed by Jack in the Box Inc. Prices vary by location.
 
+![Preview of the Jack Menu Guide home page](docs/preview.png)
+
 ## Pages
 
 | Page | File |
