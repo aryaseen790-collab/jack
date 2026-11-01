@@ -2,34 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Full Menu</title>
 <meta name="description" content="Search and filter every item on the Jack in the Box menu with prices.">
+<meta name="theme-color" content="#e01e00">
+<meta property="og:title" content="Full Menu · Jack Menu Guide">
+<meta property="og:description" content="Search and filter every item on the Jack in the Box menu with prices.">
+<meta property="og:image" content="docs/preview.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function slotOk(i){i.parentNode.classList.add("loaded")}function slotErr(i){var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()}</script>
 </head>
 <body data-page="menu">
 <header id="site-header"></header>
 <main class="wrap">
 
-<div class="page-head"><h1>Full menu</h1><p>Every item in one place. Search, filter by section or sort by price.</p></div>
-<div class="notice"><strong>Heads up:</strong> prices are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div>
-<div class="controls">
-  <input type="search" id="search" placeholder="Search items, e.g. spicy, croissant, shake" aria-label="Search menu items">
-  <select id="sort" aria-label="Sort items">
-    <option value="section">Group by section</option>
-    <option value="low">Price: low to high</option>
-    <option value="high">Price: high to low</option>
-    <option value="name">Name: A to Z</option>
-  </select>
+<div class="page-head"><span class="eyebrow-label">Everything</span><h1 class="split">The full menu</h1><p class="reveal">Search, filter by section, cap the price or sort. Tap any picture to see more.</p></div>
+<div class="toolbar">
+  <div class="controls">
+    <label class="field"><span class="sr-only">Search menu items</span><input type="search" id="search" placeholder="Search: spicy, croissant, shake…"></label>
+    <label class="range-field">Up to <output id="max-out">$0</output><input type="range" id="max-price" min="1" step="0.5" aria-label="Maximum price"></label>
+    <select class="select" id="sort" aria-label="Sort items">
+      <option value="section">Group by section</option>
+      <option value="low">Price: low to high</option>
+      <option value="high">Price: high to low</option>
+      <option value="name">Name: A to Z</option>
+    </select>
+  </div>
+  <div class="chips" id="chips" role="toolbar" aria-label="Filter by section"></div>
 </div>
-<div class="chips" id="chips" role="toolbar" aria-label="Filter by section"></div>
 <p class="result-count" id="result-count" aria-live="polite"></p>
 <div id="full-menu"></div>
+<div class="notice reveal"><div><strong>Heads up:</strong> these are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div></div>
 
 </main>
 <footer id="site-footer"></footer>

@@ -2,34 +2,39 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>My Order</title>
 <meta name="description" content="Add Jack in the Box menu items and estimate your total before you order.">
+<meta name="theme-color" content="#e01e00">
+<meta property="og:title" content="My Order · Jack Menu Guide">
+<meta property="og:description" content="Add Jack in the Box menu items and estimate your total before you order.">
+<meta property="og:image" content="docs/preview.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function slotOk(i){i.parentNode.classList.add("loaded")}function slotErr(i){var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()}</script>
 </head>
 <body data-page="order">
 <header id="site-header"></header>
 <main class="wrap">
 
-<div class="page-head"><span class="eyebrow" aria-hidden="true">🧾</span><h1>My order</h1><p>Add items from any menu page to estimate what you'll spend. This is only a calculator: it doesn't place an order. Your list is saved in this browser.</p></div>
+<div class="page-head"><span class="eyebrow-label">Estimator</span><h1 class="split">My order</h1><p class="reveal">Add items from any page to see what you'll spend. This is a calculator only: it doesn't place an order. Your list is saved in this browser.</p></div>
 <div class="order-layout">
-  <div class="panel"><div id="order-list"></div></div>
-  <aside class="panel">
-    <label class="tax" for="tax">Sales tax %<input id="tax" type="number" min="0" max="15" step="0.25" value="8.25"></label>
+  <div class="panel" data-cart-list></div>
+  <aside class="panel sticky stack">
+    <label class="tax" for="tax">Sales tax %<input id="tax" type="number" min="0" max="20" step="0.25"></label>
     <div class="totals">
-      <div><span>Subtotal</span><span id="o-sub">$0.00</span></div>
-      <div><span>Estimated tax</span><span id="o-tax">$0.00</span></div>
-      <div class="grand"><span>Total</span><span id="o-total">$0.00</span></div>
+      <div><span>Subtotal</span><span data-cart-sub>$0.00</span></div>
+      <div><span>Estimated tax</span><span data-cart-tax>$0.00</span></div>
+      <div class="grand"><span>Total</span><span data-cart-total>$0.00</span></div>
     </div>
-    <p style="color:var(--muted);font-size:.88rem">Uses typical prices. Your restaurant's prices may be higher or lower.</p>
-    <button class="btn ghost" type="button" id="clear-order">Clear order</button>
+    <p class="small" style="margin:0">Uses typical prices. Your restaurant's prices may be higher or lower.</p>
+    <button class="btn ghost" type="button" data-clear-cart>Clear order</button>
   </aside>
 </div>
+<section class="block"><div class="section-head reveal"><div><span class="eyebrow-label">Add-ons</span><h2>Round it out</h2></div></div><div class="grid" id="addons"></div></section>
 
 </main>
 <footer id="site-footer"></footer>

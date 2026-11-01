@@ -2,23 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Desserts & Drinks Menu</title>
 <meta name="description" content="Jack in the Box desserts & drinks menu with prices.">
+<meta name="theme-color" content="#e01e00">
+<meta property="og:title" content="Desserts & Drinks Menu · Jack Menu Guide">
+<meta property="og:description" content="Jack in the Box desserts & drinks menu with prices.">
+<meta property="og:image" content="docs/preview.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function slotOk(i){i.parentNode.classList.add("loaded")}function slotErr(i){var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()}</script>
 </head>
 <body data-page="desserts">
 <header id="site-header"></header>
 <main class="wrap">
 
-<div class="page-head"><span class="eyebrow" aria-hidden="true">🥤</span><h1>Desserts & Drinks</h1><p>Shakes, cheesecake and fountain drinks.</p><span class="count" id="category-count"></span></div>
-<div class="notice"><strong>Heads up:</strong> prices are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div>
+<div class="cat-hero">
+  <div><span class="eyebrow-label">Menu section</span><h1 class="split">Desserts &amp; Drinks</h1><p class="reveal">Shakes, cheesecake and fountain drinks.</p><span class="count reveal" id="category-count"></span></div>
+  <div class="art reveal" id="category-art"></div>
+</div>
+<div class="notice reveal"><div><strong>Heads up:</strong> these are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div></div>
 <div class="grid" id="category-items" data-cat="desserts"></div>
+<section class="block"><div class="section-head"><h2 style="font-size:1.4rem">More sections</h2></div><div class="chips" id="other-sections" style="flex-wrap:wrap"></div></section>
 
 </main>
 <footer id="site-footer"></footer>

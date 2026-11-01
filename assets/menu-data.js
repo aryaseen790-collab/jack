@@ -10,6 +10,11 @@
  */
 window.MENU = {
   updated: "October 31, 2026",
+  // While true, empty image spaces show the file name they are waiting for
+  // (for example "img/items/jumbo-jack"). Set to false once your images are in.
+  showImageSlots: true,
+  // Late-night Munchie Meal hours (24h clock, local time).
+  munchieHours: { start: 21, end: 5 },
   categories: [
     { id: "burgers",   name: "Burgers",            page: "burgers.html",   icon: "🍔", blurb: "Jack's classic burgers, from the Jumbo Jack to the Bacon Ultimate." },
     { id: "chicken",   name: "Chicken",            page: "chicken.html",   icon: "🍗", blurb: "Spicy sandwiches, crispy strips and nuggets." },
@@ -72,7 +77,7 @@ window.MENU = {
     { cat: "combos", name: "Extreme Sausage Sandwich Combo", price: 7.29, low: 4.29, high: 7.29, desc: "Extreme Sausage Sandwich with hash browns and a drink." }
   ],
   deals: [
-    { title: "Doomsday Dipping Box", when: "Launches November 5, 2026", desc: "A movie tie-in box with Popcorn Chicken, two Mozzarella Sticks, two tacos, seasoned curly fries and a drink. Sauces: the new Assemble Sauce, Mutant Marinara and Buttermilk Ranch. Price not announced yet.", tag: "Coming soon" },
+    { title: "Doomsday Dipping Box", when: "Launches November 5, 2026", starts: "2026-11-05T00:00:00", desc: "A movie tie-in box with Popcorn Chicken, two Mozzarella Sticks, two tacos, seasoned curly fries and a drink. Sauces: the new Assemble Sauce, Mutant Marinara and Buttermilk Ranch. Price not announced yet.", tag: "Coming soon" },
     { title: "Munchie Meal of Horror", when: "Halloween limited time", desc: "A Halloween Munchie Meal with a Double Krusty Burger of Terror or a Double Chicken Sandwich of Terror and a glow-in-the-dark cup. Listed at about $14.00.", tag: "Limited time" },
     { title: "2 Jack Wraps for $6", when: "Ongoing at many locations", desc: "Mix and match the Crispy Jack Wrap and the Grilled Jack Wrap.", tag: "Value" },
     { title: "Jack Pack app offers", when: "Changes weekly", desc: "The Jack in the Box app has rotating member-only deals, such as discounted tacos. Check the app for what's live near you.", tag: "App" },
