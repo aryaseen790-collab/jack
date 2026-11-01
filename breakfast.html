@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function slotOk(i){i.parentNode.classList.add("loaded")}function slotErr(i){var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()}</script>
+<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function isSlotImg(i){return i&&i.tagName==="IMG"&&i.parentNode&&i.parentNode.classList&&i.parentNode.classList.contains("slot")}document.addEventListener("load",function(e){if(isSlotImg(e.target))e.target.parentNode.classList.add("loaded")},true);document.addEventListener("error",function(e){var i=e.target;if(!isSlotImg(i))return;var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()},true);</script>
 </head>
 <body data-page="breakfast">
 <header id="site-header"></header>

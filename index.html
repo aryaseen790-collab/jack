@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function slotOk(i){i.parentNode.classList.add("loaded")}function slotErr(i){var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()}</script>
+<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function isSlotImg(i){return i&&i.tagName==="IMG"&&i.parentNode&&i.parentNode.classList&&i.parentNode.classList.contains("slot")}document.addEventListener("load",function(e){if(isSlotImg(e.target))e.target.parentNode.classList.add("loaded")},true);document.addEventListener("error",function(e){var i=e.target;if(!isSlotImg(i))return;var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()},true);</script>
 </head>
 <body data-page="home">
 <header id="site-header"></header>
@@ -22,7 +22,7 @@
 
 <section class="stage" id="stage">
   <div class="stage-sticky">
-    <div class="stage-bg" aria-hidden="true"><div class="slot "><img src="assets/img/bg/hero.webp" data-alt="assets/img/bg/hero.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji"></span></div></div><span class="glow g1"></span><span class="glow g2"></span><div class="seeds"></div></div>
+    <div class="stage-bg" aria-hidden="true"><div class="slot "><img src="assets/img/bg/hero.webp" data-alt="assets/img/bg/hero.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji"></span></div></div><span class="glow g1"></span><span class="glow g2"></span><div class="seeds"></div></div>
     <div class="wrap stage-grid">
       <div class="stage-copy">
         <p class="kicker">Unofficial guide · updated <span data-updated></span></p>
@@ -36,11 +36,11 @@
       </div>
       <div class="burger3d" id="burger3d" aria-hidden="true">
         <div class="burger-shadow"></div>
-        <div class="burger-rig"><div class="layer l-bun-top" style="--i:0" data-label="Sesame bun"><div class="slot"><img src="assets/img/hero/bun-top.webp" data-alt="assets/img/hero/bun-top.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><i class="shape"></i></div></div><div class="layer l-lettuce" style="--i:1" data-label="Lettuce"><div class="slot"><img src="assets/img/hero/lettuce.webp" data-alt="assets/img/hero/lettuce.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><i class="shape"></i></div></div><div class="layer l-tomato" style="--i:2" data-label="Tomato"><div class="slot"><img src="assets/img/hero/tomato.webp" data-alt="assets/img/hero/tomato.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><i class="shape"></i></div></div><div class="layer l-cheese" style="--i:3" data-label="Cheese"><div class="slot"><img src="assets/img/hero/cheese.webp" data-alt="assets/img/hero/cheese.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><i class="shape"></i></div></div><div class="layer l-patty" style="--i:4" data-label="Beef patty"><div class="slot"><img src="assets/img/hero/patty.webp" data-alt="assets/img/hero/patty.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><i class="shape"></i></div></div><div class="layer l-bun-bottom" style="--i:5" data-label="Bottom bun"><div class="slot"><img src="assets/img/hero/bun-bottom.webp" data-alt="assets/img/hero/bun-bottom.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><i class="shape"></i></div></div></div>
-        <div class="orbiter o1"><div class="slot float"><img src="assets/img/hero/taco.webp" data-alt="assets/img/hero/taco.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🌮</span></div></div></div>
-        <div class="orbiter o2"><div class="slot float"><img src="assets/img/hero/shake.webp" data-alt="assets/img/hero/shake.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🥤</span></div></div></div>
-        <div class="orbiter o3"><div class="slot float"><img src="assets/img/hero/fries.webp" data-alt="assets/img/hero/fries.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🍟</span></div></div></div>
-        <div class="orbiter o4"><div class="slot float"><img src="assets/img/hero/croissant.webp" data-alt="assets/img/hero/croissant.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🥐</span></div></div></div>
+        <div class="burger-rig"><div class="layer l-bun-top" style="--i:0" data-label="Sesame bun"><div class="slot"><img src="assets/img/hero/bun-top.webp" data-alt="assets/img/hero/bun-top.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-lettuce" style="--i:1" data-label="Lettuce"><div class="slot"><img src="assets/img/hero/lettuce.webp" data-alt="assets/img/hero/lettuce.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-tomato" style="--i:2" data-label="Tomato"><div class="slot"><img src="assets/img/hero/tomato.webp" data-alt="assets/img/hero/tomato.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-cheese" style="--i:3" data-label="Cheese"><div class="slot"><img src="assets/img/hero/cheese.webp" data-alt="assets/img/hero/cheese.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-patty" style="--i:4" data-label="Beef patty"><div class="slot"><img src="assets/img/hero/patty.webp" data-alt="assets/img/hero/patty.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-bun-bottom" style="--i:5" data-label="Bottom bun"><div class="slot"><img src="assets/img/hero/bun-bottom.webp" data-alt="assets/img/hero/bun-bottom.png" alt="" decoding="async"><i class="shape"></i></div></div></div>
+        <div class="orbiter o1"><div class="slot float"><img src="assets/img/hero/taco.webp" data-alt="assets/img/hero/taco.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🌮</span></div></div></div>
+        <div class="orbiter o2"><div class="slot float"><img src="assets/img/hero/shake.webp" data-alt="assets/img/hero/shake.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🥤</span></div></div></div>
+        <div class="orbiter o3"><div class="slot float"><img src="assets/img/hero/fries.webp" data-alt="assets/img/hero/fries.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🍟</span></div></div></div>
+        <div class="orbiter o4"><div class="slot float"><img src="assets/img/hero/croissant.webp" data-alt="assets/img/hero/croissant.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🥐</span></div></div></div>
       </div>
     </div>
     <div class="scroll-hint">Scroll to build</div>
@@ -57,7 +57,7 @@
     <div class="grid" id="popular-items"></div>
   </section>
   <section class="night reveal" aria-labelledby="night-h">
-    <div class="bg" aria-hidden="true"><div class="slot "><img src="assets/img/bg/late-night.webp" data-alt="assets/img/bg/late-night.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji"></span></div></div></div>
+    <div class="bg" aria-hidden="true"><div class="slot "><img src="assets/img/bg/late-night.webp" data-alt="assets/img/bg/late-night.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji"></span></div></div></div>
     <div>
       <span class="eyebrow-label" style="color:#ff9ae6">After dark</span>
       <h2 id="night-h">Munchie Meals</h2>
@@ -65,7 +65,7 @@
       <div class="neon-clock" id="munchie-clock">⏰ Checking the time…</div><br>
       <a class="btn" href="tacos.html">See Tacos &amp; Munchies →</a>
     </div>
-    <div class="art"><div class="slot float"><img src="assets/img/munchie-meal.webp" data-alt="assets/img/munchie-meal.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🌙</span><code>img/munchie-meal</code></div></div></div>
+    <div class="art"><div class="slot float"><img src="assets/img/munchie-meal.webp" data-alt="assets/img/munchie-meal.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🌙</span><code>img/munchie-meal</code></div></div></div>
   </section>
   <section class="block">
     <div class="section-head reveal"><div><span class="eyebrow-label">Right now</span><h2>Deals &amp; limited-time items</h2></div><a href="deals.html">All deals <span>→</span></a></div>

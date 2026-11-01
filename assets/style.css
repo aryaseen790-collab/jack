@@ -66,11 +66,12 @@ h1, h2, h3 { font-family: "Archivo Black", "Inter", system-ui, sans-serif; font-
 kbd { font: 600 .75rem/1 "Inter", sans-serif; padding: 3px 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface-2); color: var(--muted); }
 :focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; }
 
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 45; background: var(--bg); }
 /* Scroll progress */
 .progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: 60; background: linear-gradient(90deg, var(--gold), var(--accent)); transform-origin: 0 50%; transform: scaleX(0); pointer-events: none; }
 
 /* ---------- Header ---------- */
-#site-header { position: sticky; top: 0; z-index: 40; background: color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s; }
+#site-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter: saturate(1.6) blur(14px); -webkit-backdrop-filter: saturate(1.6) blur(14px); border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s; }
 #site-header.scrolled { border-color: var(--line); box-shadow: 0 8px 30px -18px rgba(0,0,0,.35); }
 .bar { max-width: 1200px; margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .brand { white-space: nowrap; display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 800; font-size: 1.1rem; }
@@ -139,10 +140,10 @@ kbd { font: 600 .75rem/1 "Inter", sans-serif; padding: 3px 6px; border-radius: 6
 .btn.light { background: #fff; color: #b31200; box-shadow: 0 10px 30px -10px rgba(0,0,0,.4); }
 
 /* ---------- Reveal on scroll ---------- */
-.reveal { opacity: 0; translate: 0 28px; transition: opacity .7s var(--ease), translate .7s var(--ease); transition-delay: var(--d, 0s); }
-.reveal.in { opacity: 1; translate: 0 0; }
-.split .w { display: inline-block; opacity: 0; translate: 0 .6em; rotate: 4deg; transition: opacity .7s var(--ease), translate .7s var(--ease), rotate .7s var(--ease); transition-delay: calc(var(--i) * 55ms + .1s); }
-.split.in .w { opacity: 1; translate: 0 0; rotate: 0deg; }
+.reveal { translate: 0 28px; scale: .985; transition: translate .7s var(--ease), scale .7s var(--ease); transition-delay: var(--d, 0s); }
+.reveal.in { translate: 0 0; scale: 1; }
+.split .w { display: inline-block; translate: 0 .35em; rotate: 3deg; transition: translate .7s var(--ease), rotate .7s var(--ease); transition-delay: calc(var(--i) * 55ms + .1s); }
+.split.in .w { translate: 0 0; rotate: 0deg; }
 
 /* ---------- Hero stage (home) ---------- */
 .stage { position: relative; height: 210vh; margin-top: -1px; }

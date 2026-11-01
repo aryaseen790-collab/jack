@@ -28,7 +28,7 @@
      placeholder (emoji + the file name it expects) stays visible. */
   function slot(path, emoji, cls = "", alt = "") {
     return `<div class="slot ${cls}">` +
-      `<img src="assets/img/${path}.webp" data-alt="assets/img/${path}.png" alt="${esc(alt)}" loading="lazy" decoding="async" onload="slotOk(this)" onerror="slotErr(this)">` +
+      `<img src="assets/img/${path}.webp" data-alt="assets/img/${path}.png" alt="${esc(alt)}" loading="lazy" decoding="async">` +
       `<div class="slot-ph" aria-hidden="true"><span class="slot-emoji">${emoji}</span>${M.showImageSlots ? `<code>img/${path}</code>` : ""}</div></div>`;
   }
 

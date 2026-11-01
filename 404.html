@@ -14,13 +14,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
-<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function slotOk(i){i.parentNode.classList.add("loaded")}function slotErr(i){var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()}</script>
+<script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function isSlotImg(i){return i&&i.tagName==="IMG"&&i.parentNode&&i.parentNode.classList&&i.parentNode.classList.contains("slot")}document.addEventListener("load",function(e){if(isSlotImg(e.target))e.target.parentNode.classList.add("loaded")},true);document.addEventListener("error",function(e){var i=e.target;if(!isSlotImg(i))return;var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()},true);</script>
 </head>
 <body data-page="">
 <header id="site-header"></header>
 <main class="wrap">
 
-<div class="lost"><div class="slot float"><img src="assets/img/lost.webp" data-alt="assets/img/lost.png" alt="" decoding="async" onload="slotOk(this)" onerror="slotErr(this)"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🍟</span><code>img/lost</code></div></div><h1>Page not found</h1><p class="small">That page fell out of the bag.</p><a class="btn" href="index.html">Back to the menu</a></div>
+<div class="lost"><div class="slot float"><img src="assets/img/lost.webp" data-alt="assets/img/lost.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🍟</span><code>img/lost</code></div></div><h1>Page not found</h1><p class="small">That page fell out of the bag.</p><a class="btn" href="index.html">Back to the menu</a></div>
 
 </main>
 <footer id="site-footer"></footer>
