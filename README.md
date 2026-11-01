@@ -59,4 +59,6 @@ Then open http://localhost:8000.
 
 ## Deploy
 
-`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to `main`. Turn on Pages in the repository settings (Source: GitHub Actions).
+`.github/workflows/pages.yml` publishes the site to GitHub Pages on every push to `main` or `claude/pensive-heisenberg-1tyw9g`. If the first run can't turn Pages on by itself, open **Settings → Pages**, set **Source** to **GitHub Actions**, and re-run the workflow.
+
+Live site: https://aryaseen790-collab.github.io/jack/
