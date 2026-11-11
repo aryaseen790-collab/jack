@@ -77,8 +77,7 @@ window.MENU = {
     { cat: "combos", name: "Extreme Sausage Sandwich Combo", price: 7.29, low: 4.29, high: 7.29, desc: "Extreme Sausage Sandwich with hash browns and a drink." }
   ],
   deals: [
-    { title: "Doomsday Dipping Box", when: "Launches November 5, 2026", starts: "2026-11-05T00:00:00", desc: "A movie tie-in box with Popcorn Chicken, two Mozzarella Sticks, two tacos, seasoned curly fries and a drink. Sauces: the new Assemble Sauce, Mutant Marinara and Buttermilk Ranch. Price not announced yet.", tag: "Coming soon" },
-    { title: "Munchie Meal of Horror", when: "Halloween limited time", desc: "A Halloween Munchie Meal with a Double Krusty Burger of Terror or a Double Chicken Sandwich of Terror and a glow-in-the-dark cup. Listed at about $14.00.", tag: "Limited time" },
+    { title: "Doomsday Dipping Box", when: "New · launched November 5, 2026", starts: "2026-11-05T00:00:00", desc: "A movie tie-in box with Popcorn Chicken, two Mozzarella Sticks, two tacos, seasoned curly fries and a drink. Sauces: the new Assemble Sauce, Mutant Marinara and Buttermilk Ranch. Price varies by location.", tag: "New" },
     { title: "2 Jack Wraps for $6", when: "Ongoing at many locations", desc: "Mix and match the Crispy Jack Wrap and the Grilled Jack Wrap.", tag: "Value" },
     { title: "Jack Pack app offers", when: "Changes weekly", desc: "The Jack in the Box app has rotating member-only deals, such as discounted tacos. Check the app for what's live near you.", tag: "App" },
     { title: "Late-night Munchie Meals", when: "Usually 9 pm to 5 am", desc: "Build your own Munchie Meal, from about $7.99 to $10.00 depending on location.", tag: "Late night" }

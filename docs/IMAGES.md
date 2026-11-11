@@ -14,31 +14,17 @@ Every picture on the site has a reserved space. Until an image file exists, the 
 3D rendered, glossy stylized food, soft studio lighting, subtle rim light, floating at a slight angle, centered, isolated on a transparent background, no text, no logo, no packaging, high detail, appetizing, warm red and golden accents, 1:1 square
 ```
 
-## Hero (home page)
+## The toy box
 
-The burger comes apart layer by layer as you scroll. Each layer is a separate image, shot from the same three-quarter angle. Until you add them, the site draws its own burger.
-
-| File | Prompt |
-|---|---|
-| `hero/bun-top` | A single top sesame-seed burger bun, three-quarter angle |
-| `hero/lettuce` | A single ruffled green lettuce leaf, flat, three-quarter angle |
-| `hero/tomato` | A single thick red tomato slice, three-quarter angle |
-| `hero/cheese` | A single melted American cheese slice draping slightly, three-quarter angle |
-| `hero/patty` | A single grilled beef burger patty with char marks, three-quarter angle |
-| `hero/bun-bottom` | A single toasted bottom burger bun, three-quarter angle |
-| `hero/taco` | Two crunchy tacos with cheese, lettuce and taco sauce |
-| `hero/fries` | A red cup overflowing with seasoned spiral curly fries |
-| `hero/shake` | A tall cookies-and-cream milkshake with whipped cream |
-| `hero/croissant` | A croissant breakfast sandwich with egg, bacon and cheese |
+The home page box, the preview box beside every menu board and the phone pop-up all show the **menu item images** below, so those are the most important ones. Until an image exists, the box pops out an emoji stand-in.
 
 ## Backgrounds (no transparency, 16:9)
 
 | File | Prompt |
 |---|---|
-| `bg/hero` | Abstract soft 3D blobs and floating sesame seeds on a warm red-orange gradient, subtle grain, lots of empty space, no text, 16:9 |
 | `bg/late-night` | Neon-lit late-night drive-thru scene at 2am, purple and pink neon glow, rain reflections, cinematic 3D, no text, no logos, 16:9 |
 
-## Section images
+## Section images (they pop up on the home page menu board)
 
 | File | Prompt |
 |---|---|
@@ -49,8 +35,6 @@ The burger comes apart layer by layer as you scroll. Each layer is a separate im
 | `categories/sides` | A red cup overflowing with seasoned spiral curly fries, a few fries flying out |
 | `categories/desserts` | A cookies-and-cream milkshake with whipped cream beside a slice of New York cheesecake |
 | `categories/combos` | A burger, curly fries and a fountain soda arranged together as a meal |
-| `munchie-meal` | A late-night meal of a burger, tacos and loaded curly fries glowing under purple neon light |
-| `lost` | A single cute curly fry looking lost (used on the page-not-found screen) |
 
 ## Menu items (37)
 
@@ -96,12 +80,11 @@ For each item use: *"A single [item]: [description], hero product shot, three-qu
 | `items/grande-sausage-burrito-combo` | Grande Sausage Burrito Combo | Grande Sausage Breakfast Burrito with hash browns and a drink. |
 | `items/extreme-sausage-sandwich-combo` | Extreme Sausage Sandwich Combo | Extreme Sausage Sandwich with hash browns and a drink. |
 
-## Deals (wide 16:9, transparent background)
+## Deals (square, transparent background; shown on the coupon stubs)
 
 | File | Prompt |
 |---|---|
 | `deals/doomsday-dipping-box` | Doomsday Dipping Box: A movie tie-in box with Popcorn Chicken, two Mozzarella Sticks, two tacos, seasoned curly fries and a drink. |
-| `deals/munchie-meal-of-horror` | Munchie Meal of Horror: A Halloween Munchie Meal with a Double Krusty Burger of Terror or a Double Chicken Sandwich of Terror and a glow-in-the-dark cup. |
 | `deals/2-jack-wraps-for-6` | 2 Jack Wraps for $6: Mix and match the Crispy Jack Wrap and the Grilled Jack Wrap.. |
 | `deals/jack-pack-app-offers` | Jack Pack app offers: The Jack in the Box app has rotating member-only deals, such as discounted tacos. |
 | `deals/late-night-munchie-meals` | Late-night Munchie Meals: Build your own Munchie Meal, from about $7.99 to $10.00 depending on location.. |

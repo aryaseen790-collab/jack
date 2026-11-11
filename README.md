@@ -4,21 +4,14 @@ An unofficial, fan-made website for the Jack in the Box menu, with researched pr
 
 ## Features
 
-- **3D hero:** a burger that comes apart layer by layer as you scroll and turns to follow the mouse, with floating food around it and falling sesame seeds.
-- **3D tilt cards** with a light glare that follows the cursor, plus floating food images.
-- **Scroll animations:** headlines reveal word by word, cards fade in in sequence, numbers count up and a price ticker scrolls across the page.
-- **Smooth page transitions** (View Transitions API) and a circular light/dark mode switch.
-- **Order cart:** a slide-out drawer, items that fly into the cart, quantity controls and a total with sales tax. Saved in the browser.
-- **Quick view** popup for every item, with quantity and add to order.
-- **⌘K / Ctrl+K search** across items and pages, with keyboard navigation.
-- **Favorites (♥)** with a Favorites filter on the full menu.
-- **Full menu tools:** search, section filters, a max-price slider and sorting.
-- **Live extras:** a countdown to new launches and a late-night Munchie Meal clock.
-- Works on phones, respects reduced-motion settings and supports keyboard use.
-
-> Not affiliated with or endorsed by Jack in the Box Inc. Prices vary by location.
-
-![Preview of the Jack Menu Guide home page](docs/preview.png)
+- **The toy box (home page):** a 3D jack-in-the-box built in CSS. Drag the crank clockwise (or press "Turn it for me") and it plays *Pop Goes the Weasel* note by note; on the "Pop!" the lid springs open and a menu item bounces out on a coil. All movement uses a small spring-physics engine, so every pop wobbles a little differently.
+- **Music box sound:** off by default. Turn it on with the ♪ button to hear the tune, crank clicks, the pop and the receipt printer, all generated live with the Web Audio API.
+- **Drive-thru menu board:** sections and items laid out like a backlit menu board, with dotted leaders and prices on **split-flap tiles** that flip when they scroll into view or change.
+- **Preview box:** hover (or focus) any item on a menu page and it pops out of a box beside the board. On phones, tapping an item opens a pop-up sheet instead.
+- **Thermal receipt cart:** + adds items to a receipt that prints out of a slot under the header, with a jagged tear-off edge and barcode. "Tear off" clears it.
+- **"What can I get for $X?":** set a budget and it builds the three best meals (entrée, side, drink or dessert) that fit, including tax.
+- **Late-night neon sign** that lights up during Munchie Meal hours, **coupon-style deals**, ⌘K/Ctrl+K search, smooth page transitions and a light/dark switch.
+- Works on phones, supports keyboard use, and respects reduced-motion settings.
 
 ## Pages
 

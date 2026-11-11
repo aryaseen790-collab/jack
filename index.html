@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jack Menu Guide</title>
-<meta name="description" content="An unofficial Jack in the Box menu guide with current prices for burgers, tacos, chicken, breakfast, sides, desserts and deals.">
-<meta name="theme-color" content="#e01e00">
-<meta property="og:title" content="Jack Menu Guide · Jack Menu Guide">
-<meta property="og:description" content="An unofficial Jack in the Box menu guide with current prices for burgers, tacos, chicken, breakfast, sides, desserts and deals.">
+<meta name="description" content="An unofficial Jack in the Box menu guide with researched prices. Crank the box, browse the board, and build a meal for your budget.">
+<meta name="theme-color" content="#161b33">
+<meta property="og:title" content="Jack Menu Guide">
+<meta property="og:description" content="An unofficial Jack in the Box menu guide with researched prices. Crank the box, browse the board, and build a meal for your budget.">
 <meta property="og:image" content="docs/preview.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='11' width='24' height='18' rx='2' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2'/><rect x='3' y='5' width='26' height='5' rx='1.5' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2' transform='rotate(-14 3 10)'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function isSlotImg(i){return i&&i.tagName==="IMG"&&i.parentNode&&i.parentNode.classList&&i.parentNode.classList.contains("slot")}document.addEventListener("load",function(e){if(isSlotImg(e.target))e.target.parentNode.classList.add("loaded")},true);document.addEventListener("error",function(e){var i=e.target;if(!isSlotImg(i))return;var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()},true);</script>
 </head>
@@ -20,59 +20,55 @@
 <header id="site-header"></header>
 <main>
 
-<section class="stage" id="stage">
-  <div class="stage-sticky">
-    <div class="stage-bg" aria-hidden="true"><div class="slot "><img src="assets/img/bg/hero.webp" data-alt="assets/img/bg/hero.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji"></span></div></div><span class="glow g1"></span><span class="glow g2"></span><div class="seeds"></div></div>
-    <div class="wrap stage-grid">
-      <div class="stage-copy">
-        <p class="kicker">Unofficial guide · updated <span data-updated></span></p>
-        <h1 class="split">The whole Jack in the Box menu, <span class="hl">with prices.</span></h1>
-        <p class="lead">Burgers, tacos, chicken, all-day breakfast and late-night Munchie Meals. Every item has a researched price, so you know what to expect before you order.</p>
-        <form class="hero-search" id="home-search" role="search">
-          <input type="search" placeholder="Try “tacos” or “spicy”" aria-label="Search the menu">
-          <button class="btn light" type="submit">Search</button>
-        </form>
-        <div class="stats" id="hero-stats"></div>
-      </div>
-      <div class="burger3d" id="burger3d" aria-hidden="true">
-        <div class="burger-shadow"></div>
-        <div class="burger-rig"><div class="layer l-bun-top" style="--i:0" data-label="Sesame bun"><div class="slot"><img src="assets/img/hero/bun-top.webp" data-alt="assets/img/hero/bun-top.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-lettuce" style="--i:1" data-label="Lettuce"><div class="slot"><img src="assets/img/hero/lettuce.webp" data-alt="assets/img/hero/lettuce.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-tomato" style="--i:2" data-label="Tomato"><div class="slot"><img src="assets/img/hero/tomato.webp" data-alt="assets/img/hero/tomato.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-cheese" style="--i:3" data-label="Cheese"><div class="slot"><img src="assets/img/hero/cheese.webp" data-alt="assets/img/hero/cheese.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-patty" style="--i:4" data-label="Beef patty"><div class="slot"><img src="assets/img/hero/patty.webp" data-alt="assets/img/hero/patty.png" alt="" decoding="async"><i class="shape"></i></div></div><div class="layer l-bun-bottom" style="--i:5" data-label="Bottom bun"><div class="slot"><img src="assets/img/hero/bun-bottom.webp" data-alt="assets/img/hero/bun-bottom.png" alt="" decoding="async"><i class="shape"></i></div></div></div>
-        <div class="orbiter o1"><div class="slot float"><img src="assets/img/hero/taco.webp" data-alt="assets/img/hero/taco.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🌮</span></div></div></div>
-        <div class="orbiter o2"><div class="slot float"><img src="assets/img/hero/shake.webp" data-alt="assets/img/hero/shake.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🥤</span></div></div></div>
-        <div class="orbiter o3"><div class="slot float"><img src="assets/img/hero/fries.webp" data-alt="assets/img/hero/fries.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🍟</span></div></div></div>
-        <div class="orbiter o4"><div class="slot float"><img src="assets/img/hero/croissant.webp" data-alt="assets/img/hero/croissant.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🥐</span></div></div></div>
-      </div>
-    </div>
-    <div class="scroll-hint">Scroll to build</div>
+<section class="wrap hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Unofficial menu guide · prices checked <span data-updated></span></p>
+    <h1 class="hero-title"><span>Turn the crank.</span><span>See what</span><span class="pop-word">pops out.</span></h1>
+    <p class="lead">Every item on the Jack in the Box menu, with a researched price. Crank the box for a surprise pick, read the board, or tell us your budget and we'll build the meal.</p>
+    <div class="hero-actions"><a class="btn" href="menu.html">Read the full board</a><a class="btn ghost" href="#budget-h">What can I get for $10?</a></div>
+  </div>
+  <div class="hero-stage">
+    <div id="hero-box"></div>
+    <p class="crank-hint"><span>Drag the crank clockwise</span><span class="wind" id="wind" aria-hidden="true"><i></i></span><button class="btn ghost sm" type="button" data-hero-turn>Turn it for me</button><button class="btn ghost sm" type="button" data-sound aria-pressed="false"><span class="label">Music box off</span></button></p>
+    <div class="pop-card" id="pop-card" aria-live="polite"></div>
   </div>
 </section>
-<div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
-<div class="wrap">
-  <section class="block">
-    <div class="section-head reveal"><div><span class="eyebrow-label">Explore</span><h2>Browse the menu</h2></div><a href="menu.html">See everything <span>→</span></a></div>
-    <div class="tiles" id="category-tiles"></div>
-  </section>
-  <section class="block">
-    <div class="section-head reveal"><div><span class="eyebrow-label">Most loved</span><h2>Fan favorites</h2><p>Tap a picture for details, ♥ to save, or + Add to build an order.</p></div><a href="menu.html">Full menu <span>→</span></a></div>
-    <div class="grid" id="popular-items"></div>
-  </section>
-  <section class="night reveal" aria-labelledby="night-h">
-    <div class="bg" aria-hidden="true"><div class="slot "><img src="assets/img/bg/late-night.webp" data-alt="assets/img/bg/late-night.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji"></span></div></div></div>
-    <div>
-      <span class="eyebrow-label" style="color:#ff9ae6">After dark</span>
-      <h2 id="night-h">Munchie Meals</h2>
-      <p>The late-night menu, usually 9 pm to 5 am. Build your own Munchie Meal with an entrée, sides and a drink, from about $7.99 to $10.00.</p>
-      <div class="neon-clock" id="munchie-clock">⏰ Checking the time…</div><br>
-      <a class="btn" href="tacos.html">See Tacos &amp; Munchies →</a>
+<div class="led" aria-hidden="true"><div class="led-track" id="led"></div></div>
+<section class="wrap section">
+  <div class="section-head"><div><p class="eyebrow">The board</p><h2>Pick a section</h2></div><a href="menu.html">Full menu →</a></div>
+  <div class="menu-board" id="menu-board"></div>
+</section>
+<section class="wrap section budget" aria-labelledby="budget-h">
+  <div class="budget-control">
+    <h2 id="budget-h">What can I get for <span class="flap" id="budget-out"></span>?</h2>
+    <label class="sr-only" for="budget">Budget in dollars, including tax</label>
+    <input type="range" id="budget" min="3" max="25" step="0.5" value="10">
+    <p class="hint">Slide to set your budget. We pick an entrée, a side and a drink or dessert that fit, including estimated tax.</p>
+  </div>
+  <div class="meals" id="meals"></div>
+</section>
+<section class="wrap section">
+  <div class="night">
+    <div class="bg" aria-hidden="true"><div class="slot"><img src="assets/img/bg/late-night.webp" data-alt="assets/img/bg/late-night.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji"></span></div></div></div>
+    <div class="copy">
+      <p class="eyebrow" style="color:#ff9ad8">After dark</p>
+      <h2>Munchie Meals</h2>
+      <p>The late-night menu, usually from 9 pm to 5 am. Build your own Munchie Meal with an entrée, sides and a drink, from about $7.99 to $10.00.</p>
+      <span class="status" id="late-status">Checking the clock</span>
+      <a class="btn" href="tacos.html">See Tacos &amp; Munchies</a>
     </div>
-    <div class="art"><div class="slot float"><img src="assets/img/munchie-meal.webp" data-alt="assets/img/munchie-meal.png" alt="" decoding="async"><div class="slot-ph" aria-hidden="true"><span class="slot-emoji">🌙</span><code>img/munchie-meal</code></div></div></div>
-  </section>
-  <section class="block">
-    <div class="section-head reveal"><div><span class="eyebrow-label">Right now</span><h2>Deals &amp; limited-time items</h2></div><a href="deals.html">All deals <span>→</span></a></div>
-    <div class="deals" id="deals-preview"></div>
-  </section>
-  <div class="notice reveal"><div><strong>Heads up:</strong> these are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div></div>
-</div>
+    <svg class="neon" viewBox="0 0 440 230" role="img" aria-label="Neon sign: Open late">
+  <rect x="6" y="6" width="428" height="218" rx="22" fill="none" stroke="#ff4fa8" stroke-width="3" class="tube-a" opacity=".55"/>
+  <text x="220" y="112" text-anchor="middle" font-size="96" class="tube-a">OPEN</text>
+  <text x="220" y="196" text-anchor="middle" font-size="76" class="tube-b">L<tspan class="buzz">A</tspan>TE</text>
+</svg>
+  </div>
+</section>
+<section class="wrap section">
+  <div class="section-head"><div><p class="eyebrow">Clip these</p><h2>Deals right now</h2></div><a href="deals.html">All deals →</a></div>
+  <div class="coupons" id="coupons" data-limit="2"></div>
+</section>
+<div class="wrap"><div class="notice"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><p><strong>Prices are typical, not exact.</strong> They were checked on <span data-updated></span> across several price trackers. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the board shows the range.</p></div></div>
 
 </main>
 <footer id="site-footer"></footer>

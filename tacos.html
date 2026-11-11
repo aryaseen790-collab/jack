@@ -5,28 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tacos & Munchies Menu</title>
 <meta name="description" content="Jack in the Box tacos & munchies menu with prices.">
-<meta name="theme-color" content="#e01e00">
-<meta property="og:title" content="Tacos & Munchies Menu · Jack Menu Guide">
+<meta name="theme-color" content="#161b33">
+<meta property="og:title" content="Tacos & Munchies Menu">
 <meta property="og:description" content="Jack in the Box tacos & munchies menu with prices.">
 <meta property="og:image" content="docs/preview.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='11' width='24' height='18' rx='2' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2'/><rect x='3' y='5' width='26' height='5' rx='1.5' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2' transform='rotate(-14 3 10)'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function isSlotImg(i){return i&&i.tagName==="IMG"&&i.parentNode&&i.parentNode.classList&&i.parentNode.classList.contains("slot")}document.addEventListener("load",function(e){if(isSlotImg(e.target))e.target.parentNode.classList.add("loaded")},true);document.addEventListener("error",function(e){var i=e.target;if(!isSlotImg(i))return;var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()},true);</script>
 </head>
 <body data-page="tacos">
 <header id="site-header"></header>
-<main class="wrap">
+<main>
 
-<div class="cat-hero">
-  <div><span class="eyebrow-label">Menu section</span><h1 class="split">Tacos &amp; Munchies</h1><p class="reveal">Jack's famous crunchy tacos, Tiny Tacos and the late-night Munchie Meal.</p><span class="count reveal" id="category-count"></span></div>
-  <div class="art reveal" id="category-art"></div>
-</div>
-<div class="notice reveal"><div><strong>Heads up:</strong> these are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div></div>
-<div class="grid" id="category-items" data-cat="tacos"></div>
-<section class="block"><div class="section-head"><h2 style="font-size:1.4rem">More sections</h2></div><div class="chips" id="other-sections" style="flex-wrap:wrap"></div></section>
+<div class="wrap page-head"><p class="eyebrow">Menu section · <span id="category-count"></span></p><h1>Tacos &amp; Munchies</h1><p class="lead">Jack's famous crunchy tacos, Tiny Tacos and the late-night Munchie Meal.</p><nav class="lanes" aria-label="Menu sections"><a class="lane" href="burgers.html">Burgers</a><a class="lane" href="chicken.html">Chicken</a><a class="lane" href="tacos.html" aria-current="page">Tacos &amp; Munchies</a><a class="lane" href="breakfast.html">Breakfast</a><a class="lane" href="sides.html">Sides &amp; Snacks</a><a class="lane" href="desserts.html">Desserts &amp; Drinks</a><a class="lane" href="combos.html">Combos</a></nav></div>
+<div class="wrap split-layout"><aside class="preview" aria-label="Item preview"><div id="preview-box"></div><div class="pop-card" id="preview-card" aria-live="polite"></div></aside><section class="board"><h2 class="board-title">Tacos &amp; Munchies<small>Tap + to add to your receipt</small></h2><ul class="rows" id="category-rows" data-cat="tacos"></ul></section></div>
+<div class="wrap"><div class="notice"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><p><strong>Prices are typical, not exact.</strong> They were checked on <span data-updated></span> across several price trackers. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the board shows the range.</p></div></div>
 
 </main>
 <footer id="site-footer"></footer>

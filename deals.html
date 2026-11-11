@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Deals & Specials</title>
-<meta name="description" content="Current Jack in the Box deals, app offers and limited-time menu items.">
-<meta name="theme-color" content="#e01e00">
-<meta property="og:title" content="Deals & Specials · Jack Menu Guide">
-<meta property="og:description" content="Current Jack in the Box deals, app offers and limited-time menu items.">
+<title>Deals</title>
+<meta name="description" content="Current Jack in the Box deals, app offers and new menu items.">
+<meta name="theme-color" content="#161b33">
+<meta property="og:title" content="Deals">
+<meta property="og:description" content="Current Jack in the Box deals, app offers and new menu items.">
 <meta property="og:image" content="docs/preview.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='11' width='24' height='18' rx='2' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2'/><rect x='3' y='5' width='26' height='5' rx='1.5' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2' transform='rotate(-14 3 10)'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function isSlotImg(i){return i&&i.tagName==="IMG"&&i.parentNode&&i.parentNode.classList&&i.parentNode.classList.contains("slot")}document.addEventListener("load",function(e){if(isSlotImg(e.target))e.target.parentNode.classList.add("loaded")},true);document.addEventListener("error",function(e){var i=e.target;if(!isSlotImg(i))return;var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()},true);</script>
 </head>
 <body data-page="deals">
 <header id="site-header"></header>
-<main class="wrap">
+<main>
 
-<div class="page-head"><span class="eyebrow-label">Save money</span><h1 class="split">Deals &amp; specials</h1><p class="reveal">Limited-time items and value deals as of <span data-updated></span>. Deals change often and aren't offered at every location.</p></div>
-<div class="deals" id="deals-all"></div>
+<div class="wrap page-head"><p class="eyebrow">Clip and save</p><h1>Deals</h1><p class="lead">New items and value deals as of <span data-updated></span>. Deals change often and aren't offered at every location.</p></div>
+<div class="wrap"><div class="coupons" id="coupons"></div></div>
 
 </main>
 <footer id="site-footer"></footer>

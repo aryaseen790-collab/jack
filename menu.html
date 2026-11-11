@@ -4,39 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Full Menu</title>
-<meta name="description" content="Search and filter every item on the Jack in the Box menu with prices.">
-<meta name="theme-color" content="#e01e00">
-<meta property="og:title" content="Full Menu · Jack Menu Guide">
-<meta property="og:description" content="Search and filter every item on the Jack in the Box menu with prices.">
+<meta name="description" content="Every item on the Jack in the Box menu with prices: search, filter by section, cap the price and sort.">
+<meta name="theme-color" content="#161b33">
+<meta property="og:title" content="Full Menu">
+<meta property="og:description" content="Every item on the Jack in the Box menu with prices: search, filter by section, cap the price and sort.">
 <meta property="og:image" content="docs/preview.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='11' width='24' height='18' rx='2' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2'/><rect x='3' y='5' width='26' height='5' rx='1.5' fill='%23d9301f' stroke='%23f7bd1d' stroke-width='2' transform='rotate(-14 3 10)'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script>try{var t=localStorage.getItem("jitb-guide-theme");if(t)document.documentElement.setAttribute("data-theme",JSON.parse(t))}catch(e){}function isSlotImg(i){return i&&i.tagName==="IMG"&&i.parentNode&&i.parentNode.classList&&i.parentNode.classList.contains("slot")}document.addEventListener("load",function(e){if(isSlotImg(e.target))e.target.parentNode.classList.add("loaded")},true);document.addEventListener("error",function(e){var i=e.target;if(!isSlotImg(i))return;var a=i.getAttribute("data-alt");if(a){i.removeAttribute("data-alt");i.src=a;return}i.parentNode.classList.add("empty");i.remove()},true);</script>
 </head>
 <body data-page="menu">
 <header id="site-header"></header>
-<main class="wrap">
+<main>
 
-<div class="page-head"><span class="eyebrow-label">Everything</span><h1 class="split">The full menu</h1><p class="reveal">Search, filter by section, cap the price or sort. Tap any picture to see more.</p></div>
-<div class="toolbar">
-  <div class="controls">
-    <label class="field"><span class="sr-only">Search menu items</span><input type="search" id="search" placeholder="Search: spicy, croissant, shake…"></label>
-    <label class="range-field">Up to <output id="max-out">$0</output><input type="range" id="max-price" min="1" step="0.5" aria-label="Maximum price"></label>
-    <select class="select" id="sort" aria-label="Sort items">
-      <option value="section">Group by section</option>
-      <option value="low">Price: low to high</option>
-      <option value="high">Price: high to low</option>
-      <option value="name">Name: A to Z</option>
-    </select>
+<div class="wrap page-head"><p class="eyebrow">Everything on the board</p><h1>Full menu</h1><p class="lead">Search, filter by section, cap the price or sort. Hover an item to see it pop out of the box, or tap it on a phone.</p></div>
+<div class="wrap">
+  <div class="toolbar">
+    <div class="controls">
+      <label class="field"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="sr-only">Search menu items</span><input type="search" id="search" placeholder="Search: spicy, croissant, shake"></label>
+      <label class="cap"><span>Up to</span><span class="flap" id="cap-out"></span><input type="range" id="cap" min="1" step="0.5" aria-label="Maximum price"></label>
+      <select class="select" id="sort" aria-label="Sort"><option value="section">By section</option><option value="low">Cheapest first</option><option value="high">Priciest first</option><option value="name">A to Z</option></select>
+    </div>
+    <div class="lanes" id="lanes" role="toolbar" aria-label="Filter by section"></div>
+    <p class="count-line" aria-live="polite"><span class="flap" id="count-out"></span><span>items on the board</span></p>
   </div>
-  <div class="chips" id="chips" role="toolbar" aria-label="Filter by section"></div>
+  <div class="split-layout"><aside class="preview" aria-label="Item preview"><div id="preview-box"></div><div class="pop-card" id="preview-card" aria-live="polite"></div></aside><div id="full-menu"></div></div>
 </div>
-<p class="result-count" id="result-count" aria-live="polite"></p>
-<div id="full-menu"></div>
-<div class="notice reveal"><div><strong>Heads up:</strong> these are typical U.S. prices, last checked <span data-updated></span>. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the card shows the range we saw.</div></div>
+<div class="wrap"><div class="notice"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><p><strong>Prices are typical, not exact.</strong> They were checked on <span data-updated></span> across several price trackers. Each restaurant sets its own prices, so yours may differ. Where sources disagreed, the board shows the range.</p></div></div>
 
 </main>
 <footer id="site-footer"></footer>
