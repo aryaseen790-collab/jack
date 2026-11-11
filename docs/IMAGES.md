@@ -16,7 +16,7 @@ Every picture on the site has a reserved space. Until an image file exists, the 
 
 ## The toy box
 
-The home page box, the preview box beside every menu board and the phone pop-up all show the **menu item images** below, so those are the most important ones. Until an image exists, the box pops out an emoji stand-in.
+The home page box, the preview box beside every menu board and the phone pop-up all show the **menu item images** below, so those are the most important ones. Until an image exists, the box pops out a built-in 3D model of the item (a burger, taco, shake and so on). Once you add an image, it replaces the model. Use a transparent background so it floats on the spring.
 
 ## Backgrounds (no transparency, 16:9)
 

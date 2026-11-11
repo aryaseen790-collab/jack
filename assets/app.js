@@ -418,6 +418,34 @@
     return api;
   }
 
+  /* Use the WebGL box (assets/box3d.js) when it loads; fall back to the CSS box. */
+  const box3dReady = new Promise((res) => {
+    if (window.Box3D) return res(window.Box3D);
+    addEventListener("box3d-ready", () => res(window.Box3D), { once: true });
+    setTimeout(() => res(null), 8000);
+  });
+  function makeBox(host, opts = {}) {
+    let impl = null, pend = null, dead = false;
+    const queue = [];
+    host.classList.add("box3d-host", "loading");
+    if (opts.aspect) host.style.setProperty("--aspect", String(opts.aspect));
+    const run = (fn, arg) => { if (fn === "setItem" || fn === "show") pend = arg; if (impl) return impl[fn] && impl[fn](arg); queue.push([fn, arg]); };
+    box3dReady.then((B) => {
+      if (dead) return;
+      let made = null;
+      try { made = B && B.supported() ? B.create(host, { ...opts, imageBase: "assets/img/items/" }) : null; } catch (e) { made = null; }
+      host.classList.remove("loading");
+      if (!made) { host.classList.remove("box3d-host"); made = createBox(host, opts); }
+      impl = made;
+      queue.forEach(([f, a]) => impl[f] && impl[f](a));
+    });
+    return {
+      show: (i) => run("show", i), setItem: (i) => run("setItem", i), open: () => run("open"), close: () => run("close"), autoCrank: () => run("autoCrank"),
+      destroy: () => { dead = true; impl && impl.destroy && impl.destroy(); },
+      get current() { return impl ? impl.current : pend; }, get state() { return impl ? impl.state : "closed"; }
+    };
+  }
+
   /* Item card next to a box */
   function itemCard(it, { label = "Popped out", crank = false } = {}) {
     const range = it.low != null && it.high != null && it.low !== it.high ? `Seen ${money(it.low)}–${money(it.high)} depending on location` : "Typical price across sources";
@@ -450,7 +478,7 @@
   let previewBox = null, previewCard = null;
   const previewHost = $("#preview-box");
   if (previewHost) {
-    previewBox = createBox(previewHost, { size: 170, onPop: (it) => it && fillCard(previewCard, it, { label: "In the box" }) });
+    previewBox = makeBox(previewHost, { size: 170, aspect: 0.95, distance: 4.9, targetY: 1.0, onPop: (it) => it && fillCard(previewCard, it, { label: "In the box" }) });
     previewCard = $("#preview-card");
   }
   function preview(slug, fromClick) {
@@ -463,7 +491,8 @@
     sheet.innerHTML = `<div class="sheet-inner"><button class="x" type="button" data-close-sheet aria-label="Close">${icon("close")}</button><div data-sheet-box></div><div class="pop-card" data-sheet-card></div></div>`;
     const card = $("[data-sheet-card]", sheet);
     fillCard(card, it, { label: "In the box" });
-    const b = createBox($("[data-sheet-box]", sheet), { size: 150 });
+    const b = makeBox($("[data-sheet-box]", sheet), { size: 150, aspect: 0.98, distance: 4.9, targetY: 1.02 });
+    sheet.addEventListener("close", () => b.destroy(), { once: true });
     b.setItem(it);
     sheet.showModal();
     setTimeout(() => b.open(), reduce ? 0 : 260);
@@ -544,7 +573,10 @@
     const first = bySlug["jumbo-jack"];
     const rest = pool.filter((i) => i !== first).sort(() => Math.random() - 0.5);
     const card = $("#pop-card");
-    heroBox = createBox(heroHost, {
+    heroBox = makeBox(heroHost, {
+      aspect: 1.04, distance: 5.9, targetY: 1.16, popAt: POP_AT,
+      onNote: (i) => { Sound.click(); Sound.tine(NOTE[MELODY[i]] * 2); },
+      onPopSound: () => { Sound.boing(); MELODY.slice(POP_AT + 1).forEach((n, i) => Sound.tine(NOTE[n] * 2, 0.32 + i * 0.3)); },
       size: narrow() ? 160 : 230, crank: true, queue: [first, ...rest], wind: $("#wind i"),
       onPop: (it) => {
         fillCard(card, it, { crank: true });
@@ -701,7 +733,7 @@
 
   /* ---------- 404 ---------- */
   const lostHost = $("#lost-box");
-  if (lostHost) { const b = createBox(lostHost, { size: 170 }); b.setItem(null); setTimeout(() => b.open(), reduce ? 0 : 500); }
+  if (lostHost) { const b = makeBox(lostHost, { size: 170, aspect: 0.9 }); b.setItem(null); setTimeout(() => b.open(), reduce ? 0 : 500); }
 
   renderCart();
   $$("[data-updated]").forEach((el) => (el.textContent = M.updated));

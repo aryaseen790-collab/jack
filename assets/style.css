@@ -204,6 +204,17 @@ kbd { font: 600 .72rem/1 var(--f-mono); padding: 3px 6px; border-radius: 5px; bo
 @media (max-width: 900px) { .box-scene { --s: 180px; } }
 @media (max-width: 380px) { .box-scene { --s: 150px; } }
 
+/* WebGL box host */
+.box3d-host { position: relative; width: min(100%, 560px); aspect-ratio: 1 / var(--aspect, 1); margin-inline: auto; }
+.box3d-host canvas { display: block; width: 100%; height: auto; outline: none; border-radius: 18px; touch-action: none; }
+.box3d-host canvas:focus-visible { box-shadow: 0 0 0 3px var(--mustard); }
+.box3d-host.loading::after { content: ""; position: absolute; left: 50%; top: 55%; width: 46%; aspect-ratio: 1; translate: -50% -50%; border-radius: 18px; background: linear-gradient(110deg, var(--line) 30%, var(--surface) 50%, var(--line) 70%) 0 0 / 300% 100%; animation: shimmer 1.4s linear infinite; }
+@keyframes shimmer { to { background-position: -300% 0; } }
+.preview .box3d-host { width: 100%; }
+.preview .box3d-host canvas, .sheet .box3d-host canvas { touch-action: pan-y; }
+.sheet .box3d-host { width: min(100%, 380px); }
+.lost .box3d-host { width: min(100%, 360px); }
+
 /* Popped item card */
 .pop-card { width: min(100%, 420px); display: grid; grid-template-columns: 1fr auto; gap: 6px 14px; align-items: end; padding: 18px 20px; border-radius: var(--r); background: var(--board); color: var(--board-ink); box-shadow: var(--shadow); margin-top: 6px; }
 .pop-card .eyebrow { color: var(--board-muted); grid-column: 1 / -1; }
@@ -341,7 +352,7 @@ kbd { font: 600 .72rem/1 var(--f-mono); padding: 3px 6px; border-radius: 5px; bo
 .split-layout { display: grid; grid-template-columns: minmax(280px, 380px) minmax(0, 1fr); gap: 28px; align-items: start; }
 .preview { position: sticky; top: 84px; display: grid; justify-items: center; gap: 0; }
 .preview .box-scene { --s: 170px; }
-.preview .pop-card { margin-top: -6px; }
+.preview .pop-card { margin-top: 6px; }
 @media (max-width: 900px) { .split-layout { grid-template-columns: 1fr; } .preview { display: none; } }
 .page-head { display: grid; gap: 14px; padding-block: 40px 22px; }
 .page-head h1 { font-size: clamp(3.6rem, 11vw, 8rem); line-height: .84; }

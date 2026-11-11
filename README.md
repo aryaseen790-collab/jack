@@ -1,10 +1,11 @@
 # Jack Menu Guide
 
-An unofficial, fan-made website for the Jack in the Box menu, with researched prices. Plain HTML, CSS and JavaScript, with no build step and no dependencies.
+An unofficial, fan-made website for the Jack in the Box menu, with researched prices. Plain HTML, CSS and JavaScript with no build step. The only library is Three.js, included in the repo.
 
 ## Features
 
-- **The toy box (home page):** a 3D jack-in-the-box built in CSS. Drag the crank clockwise (or press "Turn it for me") and it plays *Pop Goes the Weasel* note by note; on the "Pop!" the lid springs open and a menu item bounces out on a coil. All movement uses a small spring-physics engine, so every pop wobbles a little differently.
+- **The 3D toy box (home page):** a real-time WebGL jack-in-the-box built with Three.js: lacquered red panels, gold trim and feet, a hinged lid, a brass crank and a chrome spring, with studio lighting and soft shadows. Drag the crank clockwise (or press "Turn it for me") and it plays *Pop Goes the Weasel* note by note; on the "Pop!" the lid springs open and the item bounces out on the coil and turns slowly so you can see it. Drag the box to spin it. All motion runs on spring physics.
+- **3D food models:** every item pops out as its own procedural 3D model (burgers with sesame buns, melted cheese and lettuce, sourdough, crispy chicken, tacos, croissants, burritos, nuggets, fries, shakes, cheesecake and combo pairs). Add your own images and they replace the models automatically.
 - **Music box sound:** off by default. Turn it on with the ♪ button to hear the tune, crank clicks, the pop and the receipt printer, all generated live with the Web Audio API.
 - **Drive-thru menu board:** sections and items laid out like a backlit menu board, with dotted leaders and prices on **split-flap tiles** that flip when they scroll into view or change.
 - **Preview box:** hover (or focus) any item on a menu page and it pops out of a box beside the board. On phones, tapping an item opens a pop-up sheet instead.
@@ -41,6 +42,10 @@ Every picture has a reserved space that shows the file name it's waiting for. Sa
 All menu items, prices and deals live in `assets/menu-data.js`. Each item has a typical `price`, plus optional `low`/`high` values when sources disagreed. Edit that file and every page updates.
 
 Prices were last checked on October 31, 2026. See `sources.html` for where they came from.
+
+## Libraries
+
+Three.js r160 (MIT) is included in `assets/vendor/three/`, so the site doesn't depend on an outside CDN. It only loads on pages that show the box. If WebGL isn't available, a simpler CSS box is shown instead.
 
 ## Run locally
 
